@@ -32,12 +32,12 @@ Chore List: <br>
   </tr>
   <tr>
     <td style="color: lightblue">Save Generated Prices to Database</td>
-    <td style="color: lightgray">Not Started</td>
+    <td style="color: lightgray">Done</td>
     <td style="color: violet">12/2/24</td>
   </tr>
   <tr>
     <td style="color: lightblue">Fetch Prices to Node</td>
-    <td style="color: lightgray">Not Started</td>
+    <td style="color: lightgray">Done</td>
     <td style="color: violet">12/2/24</td>
   </tr>
   <tr>
