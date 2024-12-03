@@ -1,0 +1,115 @@
+.regisPage_body{
+    display: flex;
+}
+
+.content_section{
+    height: 100%;
+    width: 50%;
+}
+
+.content_section .circle{
+    background-color: var(--secondary);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_header_section{
+    height: 0%;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.content_header_section h1{
+    color: var(--primary);
+    height: max-content;
+    width: max-content;
+    font-size: clamp(0.75rem, 0.2754rem + 2.3729vw, 2.5rem);
+}
+
+.content_lower_section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_lower_section .text{
+    color: var(--primary);
+    width: 50%;
+    height: max-content;
+    font-size: clamp(0.75rem, 0.4449rem + 1.5254vw, 1.875rem);
+    font-weight: 1000;
+}
+
+.registration_section{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.registration_modal{
+    height: 65%;
+    width: 65%;
+}
+
+.regis_modal_header_section{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.regis_modal_header_section h2{
+    height: max-content;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.regis_modal_input_section{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.regis_modal_input_label{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--secondary);
+    height: max-content;
+    width: 50%;
+    margin-bottom: 1.5px;
+    justify-content: left;
+}
+
+.regis_modal_input_box{
+    height: 5.5%;
+    width: 50%;
+    border: 1px solid var(--secondary);
+    border-radius: 7px;
+    margin-bottom: 5%;
+    padding-left: 5px;
+}
+
+.regis_modal_button{
+    height: 7.5%;
+    width: 45%;
+    border: 1px solid var(--secondary);
+    border-radius: 7px;
+    color: var(--secondary);
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

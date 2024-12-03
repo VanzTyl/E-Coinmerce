@@ -1,0 +1,53 @@
+*{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+  
+:root{
+--primary: #EBFCFB;
+--secondary: #3F7CAC;
+}
+
+.Toastify{
+width: 0;
+height: 0;
+position: absolute;
+z-index: 10;
+}
+
+.Toastify svg{
+width: 25px;
+height: 25px;
+}
+
+.Toastify__toast-container{
+width: 0;
+height: 0;
+position: absolute;
+color: white;
+}
+
+.Toastify__close-button{
+width: max-content;
+height: max-content;
+}
+
+.Toastify__toast-body div{
+width: max-content;
+height: max-content;
+}
+
+/* Add this to remove the arrow spinners from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}

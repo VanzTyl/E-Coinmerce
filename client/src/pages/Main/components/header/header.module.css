@@ -1,0 +1,92 @@
+/* header.module.css */
+.header {
+    height: 10%;
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+  
+
+.logo{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 1.5%;
+}
+
+.logo svg{
+    width: 32px;
+    height: 32px;
+}
+
+.logo h1{
+    height: max-content;
+    width: max-content;
+    color: var(--primary);
+    font-weight: 1000;
+    font-size: clamp(0.75rem, -0.25rem + 2vw, 1.5rem);
+}
+
+.cta_box{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5%;
+}
+
+.cta_box div{
+    color: var(--primary);
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+}
+  
+.home::after, .about::after, .feedback::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 1px;
+background-color: var(--primary);
+transition: width 0.35s ease;
+}
+  
+.home:hover::after, .about:hover::after, .feedback:hover::after {
+width: 100%;
+}
+
+.cta_box2{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5%;
+}
+
+.cta_box2 div{
+    height: max-content;
+    width: 40%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-size: clamp(0.5rem, -0.0833rem + 1.1667vw, 0.9375rem);
+}
+
+.cta_box2 div:nth-child(1){
+    width: 40%;
+}
+
+.cta_box2 div:nth-child(2){
+    width: 25%;
+    cursor: pointer;
+}

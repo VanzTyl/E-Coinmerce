@@ -1,104 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, CategoryScale, LinearScale, PointElement } from 'chart.js';
+// Import libraries
+import express from 'express'
+import cors from 'cors'
 
-// Register the necessary chart components
-ChartJS.register(Title, Tooltip, Legend, LineElement, CategoryScale, LinearScale, PointElement);
+// Import router
+import { user_router } from './modules/Users/routes/userRoutes.js';
+import { coin_router } from './modules/Coins/routes/coinsRoutes.js';
 
-function App() {
-  const [coins, setCoins] = useState([]); // State to store coin data
-  const [error, setError] = useState(null); // Error state for fetching issues
-  const [chartData, setChartData] = useState({}); // State to store chart data
+// Import db
 
-  // Fetch the latest coin prices every second
-  useEffect(() => {
-    const interval = setInterval(() => {
-      fetch('http://localhost:5000/api/coins/latest')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Failed to fetch coins');
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Log the fetched data for debugging
-          console.log(data);
-          setCoins(data); // Update state with the latest data
+import database from './config/db.js';
 
-          // Prepare chart data
-          const updatedChartData = {
-            labels: data.map(coin => coin.coin_id), // Coin IDs as labels
-            datasets: data.map(coin => ({
-              label: coin.coin_id,
-              data: [coin.value], // Latest value as the data point
-              borderColor: 'rgb(75, 192, 192)', // Line color
-              backgroundColor: 'rgba(75, 192, 192, 0.2)', // Fill color under the line
-              fill: true,
-              tension: 0.1,
-            })),
-          };
+// Create an instance of express
+const app = express();
 
-          setChartData(updatedChartData); // Update chart data
-        })
-        .catch(err => {
-          console.error(err);
-          setError(err.message);
-        });
-    }, 1000); // Refresh data every 1000ms (1 second)
+// Start the server on port 3000 & cors options instantiation
+const PORT = 3000;
+const allowedOrigins = 'http://localhost:5173'
 
-    // Clean up the interval when the component is unmounted
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="App">
-      <h1>Latest Coin Prices</h1>
-      {error && <p>Error: {error}</p>} {/* Display error if any */}
-
-      {/* Display chart */}
-      {coins.length > 0 ? (
-        <div>
-          {/* Render Line chart */}
-          <Line 
-            data={chartData} 
-            options={{
-              responsive: true,
-              plugins: {
-                title: {
-                  display: true,
-                  text: 'Coin Price Tracker',
-                },
-                tooltip: {
-                  callbacks: {
-                    label: function(tooltipItem) {
-                      return `${tooltipItem.dataset.label}: ${tooltipItem.raw} USD`;
-                    }
-                  }
-                }
-              },
-              scales: {
-                x: {
-                  title: {
-                    display: true,
-                    text: 'Coins',
-                  },
-                },
-                y: {
-                  title: {
-                    display: true,
-                    text: 'Price (USD)',
-                  },
-                  min: 0, // Set minimum value for the Y-axis
-                }
-              }
-            }}
-          />
-        </div>
-      ) : (
-        <p>Loading coins...</p>
-      )}
-    </div>
-  );
+const corsOptions = {
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }
 
-export default App;
+// Use declared cors options
+app.use(cors(corsOptions))
+
+// Parse form data to json
+app.use(express.json());
+
+app.use('/coins', coin_router)
+app.use('/users', user_router)
+
+// Define a simple route for the home page with JSON response
+app.get('/', (res) => {
+  res.json({ message: `Server hosted in http://localhost:${PORT}` });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
