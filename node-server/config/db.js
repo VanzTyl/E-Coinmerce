@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'; // ORM Library for MongoDB
 
 // MongoDB Setup
-const mongoURI = 'mongodb://localhost:27017/E-Coinmerce';
+const mongoURI = 'mongodb://127.0.0.1:27017/E-Coinmerce';
 
 const database = mongoose.connect(mongoURI)
   .then(() => {

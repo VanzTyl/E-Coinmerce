@@ -1,0 +1,67 @@
+.header {
+    width: 100%;
+    height: clamp(3.125rem, 1.5625rem + 8.3333vw, 9.375rem);
+    background-color: var(--secondary);
+    display: flex;
+    position: sticky;
+}
+
+.logo {
+    width: 25%;
+    height: 100%;
+    padding-left: 1.5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo svg {
+    width: clamp(1rem, 0.75rem + 1.3333vw, 2rem);;
+    height: clamp(1rem, 0.75rem + 1.3333vw, 2rem);;
+}
+
+.logo h1 {
+    width: max-content;
+    height: max-content;
+    color: var(--primary);
+    font-size: clamp(0.5rem, 0.125rem + 2vw, 2rem);
+}
+
+.header .box:nth-child(2) {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.3125rem, 0rem + 1.6667vw, 1.5625rem);
+}
+
+.header .box:nth-child(2) a {
+    font-size: clamp(0.5rem, 0.3125rem + 1vw, 1.25rem);
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .box:nth-child(3) {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header .box:nth-child(3) button {
+    font-size: clamp(0.375rem, 0.1563rem + 1.1667vw, 1.25rem);
+    border: none;
+    border-radius: clamp(0.3125rem, 0.2344rem + 0.4167vw, 0.625rem);
+    cursor: pointer;
+    height: max-content;
+    width: max-content;
+    padding: 2.5% 5%;
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}

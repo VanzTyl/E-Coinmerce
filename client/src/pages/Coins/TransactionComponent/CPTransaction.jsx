@@ -148,12 +148,19 @@ const CPTransaction = ({ coinData, onPositionUpdate }) => {
             <div className={styles.position_listing}>
                 <div className={styles.position_tab_header}>Current Positions</div>
                 <div className={styles.position_tab_container}>
+                    <div className={styles.position_tab_indicator}>
+                        <p><span>Amount</span></p>
+                        <p><span>Bought Price</span></p>
+                        <p><span>Current Price</span></p>
+                        <p><span>Profit/Loss</span></p>
+                        <p><span>Action</span></p>
+                    </div>
                     {positions.map((position) => (
                         <div key={position.position_id} className={styles.position_tab}>
                             <p>{parseFloat(position.bought_amount).toFixed(0)}</p>
                             <p>${parseFloat(position.bought_price).toFixed(6)}</p>
                             <p>${parseFloat(coinData.prices[coinData.prices.length - 1].price).toFixed(6)}</p>
-                            <p>${calculateProfitLoss(position)}</p>
+                            <p>${parseFloat(calculateProfitLoss(position)).toFixed(2)}</p>
                             <button onClick={() => handleClosePosition(position.position_id)}>
                                 Close Position
                             </button>

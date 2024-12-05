@@ -59,6 +59,34 @@
     flex-direction: column;
 }
 
+.position_tab_indicator {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.position_tab_indicator p {
+    width: 20%;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.position_tab_indicator p span {
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.position_tab_indicator p:last-child {
+    width: 10%;
+}
+
 .position_tab {
     width: 100%;
     height: 50px;

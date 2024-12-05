@@ -39,6 +39,14 @@
     gap: 3.5%;
 }
 
+.cta_box p{
+    height: max-content;
+    width: max-content;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: clamp(0.75rem, -0.25rem + 2vw, 1.5rem);
+}
+
 .cta_box div{
     color: var(--primary);
     width: max-content;

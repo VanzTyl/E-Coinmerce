@@ -57,7 +57,7 @@ def insert_or_update_price_to_mongo(coin_id, coin_name, coin_symbol, price, time
 
 coin_symbols = [
     "COF", "BTN", "ALC", "BLO", "CHX", "TKX", "CPT", "ETHR", "NNC", "BYC",
-    "MTC", "NBX", "VTC", "SLX", "DBY", "BLY", "ZTC", "CRA", "CUM", "PCT",
+    "MTC", "NBX", "VTC", "SLX", "DBY", "BLY", "ZTC", "CRA", "CNUM", "PCT",
     "FXC", "OBX", "VBX", "LNX", "CHP", "HXC", "VTCN", "CRX", "ZNB", "ETHN"
 ]
 

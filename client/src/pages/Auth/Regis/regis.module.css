@@ -18,7 +18,10 @@
 }
 
 .content_header_section{
-    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
     width: 100%;
     padding-left: 5px;
 }
@@ -26,8 +29,11 @@
 .content_header_section h1{
     color: var(--primary);
     height: max-content;
-    width: max-content;
+    padding-left: 12px;
+    width: 100%;
     font-size: clamp(0.75rem, 0.2754rem + 2.3729vw, 2.5rem);
+    cursor: pointer;
+    z-index: 100;
 }
 
 .content_lower_section{

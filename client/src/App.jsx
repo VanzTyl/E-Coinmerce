@@ -10,6 +10,8 @@ import Register from './pages/Auth/Regis/RegisPage'
 import Login from './pages/Auth/Login/LoginPage'
 import AboutPage from './pages/About/AboutPage'
 import MainPage from './pages/Main/MainPage'
+import PositionsPage from './pages/Main/Positions/PositionsPage'
+import LandingPage from './pages/Landing/LandingPage'
 
 function App() {
   
@@ -23,6 +25,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/main" element={<MainPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/positions" element={<PositionsPage />} />
+          <Route path="/" element={<LandingPage />} />
         </Routes>
     </BrowserRouter>
     </>

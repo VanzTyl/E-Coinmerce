@@ -125,7 +125,7 @@ const RegisPage = () => {
                }}
               className={styles.text}
             >
-              <h1>E-Coinmerce</h1>
+              <h1 onClick={() => navigate('/')}>E-Coinmerce</h1>
             </motion.div>
           </div>
 

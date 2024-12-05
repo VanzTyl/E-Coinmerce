@@ -13,7 +13,7 @@ const CPHeader = ({ coinData, balance }) => {
 
     return (
         <div className={styles.header}>
-            <div className={styles.logo}><h1>E-Coinmerce</h1></div>
+            <div className={styles.logo}><h1 onClick={() => navigate('/main')}>E-Coinmerce</h1></div>
             <h2 className={styles.coinName}>{coinData?.coin_name} | {coinData?.coin_symbol}</h2>
             <div className={styles.buttons_container}>
                 <button>Balance: ${balance.toFixed(2)}</button>

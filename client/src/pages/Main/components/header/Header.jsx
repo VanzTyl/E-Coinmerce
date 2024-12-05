@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({title}) => {
 
     const [headerHeight, setHeaderHeight] = useState('10%');
     const [userName, setUserName] = useState('Guest');
@@ -80,6 +80,7 @@ const Header = () => {
         <h1>E-Coinmerce</h1>
       </motion.div>
       <div className={styles.cta_box}>
+        <p>{title}</p>
       </div>
       <div className={styles.cta_box2}>
         <motion.div className={styles.login_button}>
