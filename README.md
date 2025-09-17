@@ -11,9 +11,3 @@ E-Coinmerce has its own personal coins created personally by the team.
 
 ---
 <h2>Group Members: <br> <ul><li>VanzTyl | Lead</li><li>Eman</li><li>Marc</li><li>Joaquin</li></ul></h2>
-
-<br>
-<br>
-
-# E-Coinmerce Chores
-Developer | VanzTyl
