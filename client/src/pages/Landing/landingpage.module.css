@@ -1,0 +1,298 @@
+.landing_page {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+
+.filler {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.hero_section {
+    position: relative;
+    width: 100%;
+    height: clamp(12.5rem, 7.0313rem + 29.1667vw, 34.375rem);
+}
+
+.hero_text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding-left: 1.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_text p {
+    font-size: clamp(0.75rem, 0.4375rem + 1.6667vw, 2rem);
+    font-weight: 1000;
+    height: max-content;
+    width: max-content;
+    color: var(--primary);
+}
+
+.hero_text .textBox {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: end;
+}
+
+.hero_text .textBox:nth-child(2) {
+    height: 25%;
+    padding-top: 1.5%;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero_text .textBox:nth-child(1) p {
+    font-size: clamp(0.375rem, -0.0313rem + 2.1667vw, 2rem);
+}
+
+.hero_text .textBox:nth-child(2) p {
+    font-size: clamp(0.375rem, 0.0938rem + 1.5vw, 1.5rem);
+    font-weight: 500;
+    opacity: .85;
+}
+
+.hero_text .textBox:nth-child(2) button {
+    font-size: clamp(0.375rem, 0.1563rem + 1.1667vw, 1.25rem);
+    border: none;
+    border-radius: clamp(0.3125rem, 0.2344rem + 0.4167vw, 0.625rem);
+    cursor: pointer;
+    height: max-content;
+    width: max-content;
+    padding: .75% 3.5%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+    font-weight: 800;
+}
+
+.hero_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1067c0;
+}
+
+.hero_image img {
+    position: absolute;
+    left: clamp(3.125rem, -3.9063rem + 37.5vw, 31.25rem);
+    width: 100%;
+    height: clamp(50% , 80%, 100%);
+    object-fit: cover;
+    scale: .65;
+}
+
+.about_section {
+    position: relative;
+    width: 100%;
+    height: clamp(12.5rem, 7.0313rem + 29.1667vw, 34.375rem);
+}
+
+.about_section .textBox {
+    width: 100%;
+    height: 10%;
+}
+
+.about_section .textBox h1 {
+    font-size: clamp(0.75rem, 0.4375rem + 1.6667vw, 2rem);
+    font-weight: 700;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+}
+
+.about_content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5%;
+}
+
+.feature_card {
+    width: clamp(5.9375rem, 1.1719rem + 25.4167vw, 25rem);
+    height: clamp(15% , 50%, 100%);
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+}
+
+.feature_card h2 {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--secondary);
+    font-size: clamp(0.375rem, 0.1563rem + 1.1667vw, 1.25rem);
+}
+
+.feature_card_container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+}
+
+.img_container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_container img {
+    width: clamp(1rem, -0.2031rem + 6.4167vw, 5.8125rem);
+    height: clamp(1rem, -0.2031rem + 6.4167vw, 5.8125rem);
+    object-fit: cover;
+    border-right: 2.5px solid var(--secondary);
+    padding-right: clamp(0.3125rem, 0.2344rem + 0.4167vw, 0.625rem);
+}
+
+.feature_card_container .textBox {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature_card_container .textBox p {
+    font-size: clamp(0.375rem, 0.1563rem + 1.1667vw, 1.25rem);
+    font-weight: 500;
+    opacity: .85;
+    height: max-content;
+    width: max-content;
+    color: var(--secondary);
+}
+
+.our_team_section {
+    position: relative;
+    width: 100%;
+    height: clamp(12.5rem, 3.9063rem + 45.8333vw, 46.875rem);
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our_team_section h1 {
+    font-size: clamp(0.75rem, 0.4375rem + 1.6667vw, 2rem);
+    font-weight: 700;
+    color: var(--primary);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--primary);
+}
+
+.person_card_container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person_card {
+    width: 80%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person_card .card {
+    width: 15%;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.person_card .card h2 {
+    font-size: clamp(0.375rem, 0.1563rem + 1.1667vw, 1.25rem);
+    font-weight: 700;
+    color: var(--secondary);
+    padding-left: 1.5%;
+    width: 100%;
+    height: 10%;
+}
+
+.person_card .image_section {
+    width: 100%;
+    height: 100%;
+}
+
+.person_card .card h4 {
+    font-size: clamp(0.5rem, 0.375rem + 0.6667vw, 1rem);
+    font-weight: 500;
+    color: var(--secondary);
+    padding-left: 1.5%;
+    width: 100%;
+    height: 5%;
+}
+
+.person_card .image_section {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.image_container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.person_card .card:nth-child(1) img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.person_card .card:nth-child(2) img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.person_card .card:nth-child(3) img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.person_card .card:nth-child(4) img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.person_card .card:hover .image_container img {
+    top: 0;
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
+}
